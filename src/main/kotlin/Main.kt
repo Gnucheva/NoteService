@@ -1,7 +1,8 @@
 fun main() {
-    val note1 = Note(title = "One", text = "First Note", comments = mutableListOf<Comment>())
-    val note2 = Note(title = "Two", text = "Second Note", comments = mutableListOf<Comment>())
-    val note3 = Note(title = "Three", text = "Third Note", comments = mutableListOf<Comment>())
+
+    val note1 = Note(title = "One", text = "First Note")
+    val note2 = Note(title = "Two", text = "Second Note")
+    val note3 = Note(title = "Three", text = "Third Note")
 
     val comment1 = Comment(text = "First Comment")
     val comment2 = Comment(text = "Second Comment")
