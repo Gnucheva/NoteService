@@ -101,12 +101,12 @@ class NoteService {
             if (note.id == noteId) {
 //      Проходимся по всем элементам коллекции note.comments
                 for (comment in note.comments) {
-                    comments.add(comment)
+                    if (!comment.isDeleted) {
+                        comments.add(comment)
+                    }
+
                 }
-//      Переносим все значения из списка comments в список note.commets (В список попадают
-//      элементы и возвращаем этот список
-                note.comments = comments.toMutableList()
-                return note.comments
+                return comments
             }
         }
         return null
